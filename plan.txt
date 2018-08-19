@@ -1,0 +1,11 @@
+step1: build a virtual enviroment with anaconda - https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
+step2: make user interface
+    step2.1: make static and tamplates folders
+    step2.2: make html home tamplate
+    step2.3: make the success page
+step3: make flask program
+    step3.1: create "app.py"
+    step3.2: copying from app 9 the document "app.py"
+    step3.3: change for my application
+step4: make the backend
+step5: upload to web

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Super Geocoeder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/main.css" />
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Super Geocoeder</h1>
+            <p class="lead">Enter a CSV file with column <i>Address</i> or <i>address</i>.</p>
+            <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+                <div class="form-group row">
+                    <label for="inputFile" class="col-sm-2 col-form-label">File:</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control-file" name="inputFile" id="inputFile" placeholder="File" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-5">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div class="table">
+                {{table | safe}}
+            </div>
+            {% include btn ignore missing %}
+            {{text | safe}}
+        </div>
+    </div>
+</body>
+</html>
